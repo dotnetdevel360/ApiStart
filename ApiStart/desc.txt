@@ -1,4 +1,4 @@
-Microsoft.AspNetCore.App
+icrosoft.AspNetCore.App
 Serilog
 localdb 
 

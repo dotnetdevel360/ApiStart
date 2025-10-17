@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "ApiStart": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:2742;http://localhost:2743"
+    }
+  }
+}
