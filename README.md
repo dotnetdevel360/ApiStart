@@ -3,6 +3,10 @@ API 만들기 First STEP
 
 ## 설명
 초보자를 위한 간단하게 API 만들기
+초기 시작 url 
+Localhost:port/swagger
+
+예) localhot:111:swagger
 
 ## 요구 사항
 - .NET 10
