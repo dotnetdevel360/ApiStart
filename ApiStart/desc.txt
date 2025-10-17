@@ -1,0 +1,75 @@
+Microsoft.AspNetCore.App
+Serilog
+localdb 
+
+
+
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+dotnet add package System.IdentityModel.Tokens.Jwt
+
+
+
+Microsoft.AspNetCore.App
+Microsoft.AspNetCore.Authentication.JwtBearer
+Serilog.AspNetCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Design
+
+dotnet add package Microsoft.AspNetCore.App
+dotnet add package Serilog.AspNetCore
+dotnet add package Swashbuckle.AspNetCore
+
+
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+
+Serilog.Sinks.Console", "Serilog.Sinks.File
+
+swagger 설치 패키지는 뭐야
+
+
+Microsoft.AspNetCore.App nuget 설치 명령어 알려줘 이건 콘솔 프로그램이라 설치해야 되
+
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+</Project>
+
+<Project Sdk="Microsoft.NET.Sdk">
+	<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
+
+여기에 appsettings.json 파일을 추가하고 싶어 어떻게 해야 돼
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=ApiStartDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+  },
+  "Jwt": {
+    "Key": "your-secret-key-at-least-32-characters-long",
+    "Issuer": "ApiStart",
+    "Audience": "ApiStartClient",
+    "ExpiryMinutes": 60
+  }
+}
