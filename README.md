@@ -10,7 +10,8 @@ Localhost:port/swagger
 
 ## 요구 사항
 - .NET 10
-
+- Visual Studio 2026 https://visualstudio.microsoft.com/insiders/?rwnlp=ko
+- 
 ## 시작하기
 1. 콘솔 프로젝트 생성 
 
