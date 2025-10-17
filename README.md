@@ -11,7 +11,7 @@ API 만들기 First STEP
 1. 콘솔 프로젝트 생성 
 
 2. csproj 파일을 아래와 같이 수정  자동으로 nuget 설치
-
+```
   	<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -28,7 +28,7 @@ API 만들기 First STEP
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.6" />
   </ItemGroup> 
 </Project>
-
+```
 3. API 본체 분리 
 ApiBody.cs
 
