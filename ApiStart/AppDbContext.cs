@@ -12,5 +12,6 @@ namespace ApiStart
         }
          
         public DbSet<Users> Users { get; set; } = null!;
+        public DbSet<Orders> Orders { get; set; } = null!;
     }
 }
