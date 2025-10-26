@@ -43,7 +43,11 @@ try
         // Apply migrations safely
         try
         {
-            db.Database.Migrate();
+            if (!db.Database.CanConnect())
+            {
+                db.Database.EnsureCreated();
+            } 
+            //db.Database.Migrate();
         }
         catch (Exception ex)
         {
