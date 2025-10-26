@@ -15,8 +15,7 @@ try
 
     var builder = WebApplication.CreateBuilder(args);
 
-    builder.Services.AddHealthChecks()
- .AddCheck("self", () => HealthCheckResult.Healthy());
+    builder.Services.AddHealthChecks().AddCheck("self", () => HealthCheckResult.Healthy());
 
     // EF Core SQLite connection (lightweight file DB)
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
@@ -32,6 +31,7 @@ try
 
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+
     builder.Services.AddControllers(); // 컨트롤러 서비스 등록 추가
     var app = builder.Build();
 
